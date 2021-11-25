@@ -1,6 +1,6 @@
 # workshop_R
 
-![R](https://github.com/AnaAGG/workshop_R/blob/main/images/main.jpeg)
+![R](https://github.com/AnaAGG/Understanding_R_workshop/blob/master/images/main.jpeg)
 
 In this repo we can find a R script to learn basic concepts of R.
 
