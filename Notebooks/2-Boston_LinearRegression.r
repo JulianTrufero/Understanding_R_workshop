@@ -61,7 +61,7 @@ model1 <- lm(medv ~ 1, data = dfn.train)
 model1.sum <- summary(model1)
 model1.sum
 
-model2 <- lm(medv ~  X1* crim *zn *indus* chas *nox *rm *age *dis *rad *tax* ptratio* black* lstat, data = df.train)
+model2 <- lm(medv ~ ., data = df.train)
 model2.sum <- summary(model2)
 model2.sum
 
