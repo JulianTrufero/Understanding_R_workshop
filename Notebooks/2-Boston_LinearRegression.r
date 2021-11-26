@@ -17,7 +17,7 @@ library(rpart.plot)
 getwd()
 
 setwd('/Users/anagarciagarcia/other_repos/Understanding_R_workshop')
-
+df = read_csv("data/boston.csv")
 head(Boston, 2)
 
 data(Boston, package="MASS")
@@ -34,7 +34,7 @@ sum(duplicated(Boston))
 
 scatter.smooth(x=df$medv, y=df$age, main="medv ~ age")  # scatterplot
 
-par(mfrow=c(2, 2))  # divide graph area in 2 columns
+#par(mfrow=c(2, 2))  # divide graph area in 2 columns
 boxplot(df$age, main="age", sub=paste("Outlier rows: ", boxplot.stats(df$age)$out))  # box plot for 'age'
 boxplot(df$zn, main="zn", sub=paste("Outlier rows: ", boxplot.stats(df$zn)$out))  # box plot for 'distance'
 
@@ -61,7 +61,7 @@ model1 <- lm(medv ~ 1, data = dfn.train)
 model1.sum <- summary(model1)
 model1.sum
 
-model2 <- lm(medv ~ ., data = df.train)
+model2 <- lm(medv ~  X1* crim *zn *indus* chas *nox *rm *age *dis *rad *tax* ptratio* black* lstat, data = df.train)
 model2.sum <- summary(model2)
 model2.sum
 
