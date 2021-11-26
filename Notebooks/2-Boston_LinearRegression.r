@@ -16,7 +16,7 @@ library(rpart.plot)
 
 getwd()
 
-setwd('/Users/anagarciagarcia/other_repos/workshop_R')
+setwd('/Users/anagarciagarcia/other_repos/Understanding_R_workshop')
 
 head(Boston, 2)
 
@@ -65,8 +65,7 @@ model2 <- lm(medv ~ ., data = df.train)
 model2.sum <- summary(model2)
 model2.sum
 
-ols_step_all_possible(model)
+ols_step_all_possible(model2)
 
-ols_step_best_subset(model)
+ols_step_best_subset(model2)
 
-x
